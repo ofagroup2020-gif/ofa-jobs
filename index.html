@@ -80,7 +80,7 @@
       border: 1px solid #ffe08a;
     }
 
-    /* 検索フォーム部分 */
+    /* 検索フォーム */
     .search-wrap {
       display: grid;
       grid-template-columns: 1fr;
@@ -92,7 +92,7 @@
       margin-bottom: 4px;
       display: block;
     }
-    select, input[type="text"] {
+    select, input[type=text] {
       width: 100%;
       padding: 10px;
       border-radius: 8px;
@@ -110,11 +110,9 @@
       border-radius: 999px;
       cursor: pointer;
       font-weight: 700;
-      box-shadow: 0 6px 16px rgba(0, 200, 83, .45);
+      box-shadow: 0 6px 16px rgba(0,200,83,.45);
     }
-    .search-button:hover { opacity: .92; }
 
-    /* エリア一覧 */
     .area-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
@@ -125,38 +123,17 @@
       display: block;
       background: #fafafa;
       border-radius: 10px;
-      padding: 10px 10px;
+      padding: 10px;
       font-size: 13px;
       text-decoration: none;
       color: #1565c0;
       border: 1px solid #e0e0e0;
-      transition: all 0.15s ease;
-    }
-    .area-grid a span {
-      display: block;
-      font-size: 11px;
-      color: #777;
-      margin-top: 2px;
+      transition: .15s;
     }
     .area-grid a:hover {
       background: #fff8e1;
       border-color: #ff9800;
       transform: translateY(-1px);
-    }
-
-    .pill-list {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 6px;
-      margin-top: 8px;
-      font-size: 11px;
-    }
-    .pill {
-      padding: 3px 8px;
-      border-radius: 999px;
-      border: 1px solid #e0e0e0;
-      background: #fafafa;
-      color: #555;
     }
 
     footer {
@@ -165,7 +142,6 @@
       font-size: 11px;
       color: #777;
     }
-    footer small { display: block; margin-top: 4px; }
 
     @media (min-width: 640px) {
       .search-wrap {
@@ -176,180 +152,110 @@
   </style>
 
   <script>
-    // 35エリア：フォルダ名（slug）と表示名
+    /* ---- 表示エリア一覧 ---- */
     const AREAS = {
-      "nagasaki": "長崎市",
-      "oita": "大分市",
-      "okayama": "岡山市",
-      "okinawa": "沖縄市",
+      "tokyo": "東京都（西東京エリア）",
+      "tokyo_super": "東京都（ネットスーパー）",
       "osaka": "大阪市",
-      "osaka_south": "大阪南部エリア",
-      "kyoto": "京都市",
-      "saga": "佐賀市",
-      "saitama": "埼玉県（さいたま市・川口市）",
-      "satsumasendai": "薩摩川内市",
-      "shizuoka": "静岡市",
-      "tokyo_west": "東京都（西東京エリア）",
-      "tokyo_east": "東京都（東東京エリア）",
-      "hiroshima": "広島市",
-      "kumamoto_central": "熊本市（中央区・東区）",
-      "kumamoto": "熊本市（その他エリア）",
-      "aira": "姶良市",
-      "hioki_ijuin": "日置市（伊集院エリア）",
-      "ibusuki": "指宿市",
-      "aso": "阿蘇市",
+      "osaka-south": "大阪南部",
       "fukuoka": "福岡市",
-      "kitakyushu": "北九州市",
-      "miyazaki": "宮崎市",
-      "miyakonojo": "都城市",
-      "kanoya": "鹿屋市",
-      "minamisatsuma": "南さつま市",
-      "koshi": "合志市",
-      "minamikyushu": "南九州市",
-      "izumi": "出水市",
-      "tamana": "玉名市",
-      "tosu": "鳥栖市",
-      "kurume": "久留米市",
+      "kumamoto": "熊本市",
+      "kagoshima": "鹿児島市",
+      "saitama": "埼玉県",
       "kobe": "神戸市",
-      "kirishima": "霧島市",
-      "kagoshima": "鹿児島市"
+      "kyoto": "京都市",
+      "oita": "大分市",
+      "nagasaki": "長崎市",
+      "miyazaki": "宮崎市",
+      "shizuoka": "静岡市"
+      /* 必要なら追加可能 */
     };
 
-    // ページ読み込み時：プルダウンとエリア一覧を生成
     window.addEventListener("DOMContentLoaded", () => {
-      const citySelect = document.getElementById("citySelect");
-      const areaGrid   = document.getElementById("areaGrid");
+      const select = document.getElementById("citySelect");
+      const grid = document.getElementById("areaGrid");
 
       Object.keys(AREAS).forEach(slug => {
-        const label = AREAS[slug];
+        let name = AREAS[slug];
 
-        // セレクトボックス
-        const op = document.createElement("option");
+        // セレクト項目
+        let op = document.createElement("option");
         op.value = slug;
-        op.textContent = label;
-        citySelect.appendChild(op);
+        op.textContent = name;
+        select.appendChild(op);
 
-        // 一覧グリッド
-        const a = document.createElement("a");
+        // グリッド一覧
+        let a = document.createElement("a");
         a.href = `./${slug}/index.html`;
-        a.innerHTML = `${label}エリア<span>${slug}</span>`;
-        areaGrid.appendChild(a);
+        a.innerHTML = `${name}<span>${slug}</span>`;
+        grid.appendChild(a);
       });
     });
 
-    // 検索ボタン
     function searchArea() {
       const city = document.getElementById("citySelect").value;
-      const keyword = document.getElementById("keyword").value.trim();
-
-      if (!city) {
-        alert("エリアを選択してください。");
-        return;
-      }
-
-      // いまは city でページ遷移のみ（keyword は将来拡張用）
-      const url = `./${city}/index.html`;
-      window.location.href = url;
+      if (!city) return alert("エリアを選択してください");
+      location.href = `./${city}/index.html`;
     }
   </script>
+
 </head>
 <body>
-  <header>
-    <div class="logo">
-      <span>O</span><span>F</span><span>A</span> GROUP
+
+<header>
+  <div class="logo"><span>O</span><span>F</span><span>A</span> GROUP</div>
+  <h1>OFA軽貨物ドライバー求人｜全国エリア検索・一覧</h1>
+  <p>あなたに合った働き方を全国から選べます。</p>
+</header>
+
+<main>
+
+  <!-- 説明カード -->
+  <section class="card">
+    <h2>OFAの軽貨物フランチャイズとは？</h2>
+    <p class="lead">
+      株式会社OFAは全国で軽貨物ドライバーの<strong>フランチャイズ・業務委託ネットワーク</strong>を展開しています。
+    </p>
+  </section>
+
+  <!-- 検索カード -->
+  <section class="card">
+    <h2>全国エリア検索</h2>
+    <div class="search-wrap">
+      <div>
+        <label>市区町村（エリア選択）</label>
+        <select id="citySelect">
+          <option value="">選択してください</option>
+        </select>
+      </div>
+      <div>
+        <label>フリーワード（将来拡張）</label>
+        <input id="keyword" type="text" placeholder="例）ネットスーパー">
+      </div>
+      <div>
+        <button class="search-button" onclick="searchArea()">検索する</button>
+      </div>
     </div>
-    <h1>OFA軽貨物ドライバー求人｜全国エリア検索・一覧</h1>
-    <p>「軽バン1台から、フランチャイズオーナーへ。」<br>全国のOFAパートナー拠点から、あなたに合った働き方を選べます。</p>
-  </header>
+  </section>
 
-  <main>
-    <!-- OFA説明 -->
-    <section class="card">
-      <h2>OFAの軽貨物フランチャイズとは？</h2>
-      <p class="lead">
-        株式会社OFAは、全国で軽貨物ドライバーの<strong>フランチャイズ・業務委託ネットワーク</strong>を展開しています。<br>
-        未経験からのスタート、将来はフランチャイズオーナーを目指したい方まで、段階に合わせた4つのモデルをご用意しています。
-      </p>
-      <ul style="font-size:13px; margin-left:1.2em; margin-top:4px;">
-        <li>① OFAフランチャイズ（メンバー）</li>
-        <li>② OFAフランチャイズ（オーナー）</li>
-        <li>③ 業務委託（従来型）</li>
-        <li>④ 案件オーナー（案件提供型）</li>
-      </ul>
-      <p style="font-size:13px; margin-top:6px;">
-        この4つの仕組みを軸に、OFAは<strong>「軽貨物業界トップ」</strong>を本気で目指しています。<br>
-        実際にOFAフランチャイズをはじめて<strong>年商1億円を突破したオーナーも複数名</strong>誕生しています。
-      </p>
+  <!-- 一覧 -->
+  <section class="card">
+    <h2>募集エリア一覧（クリックで移動）</h2>
+    <div id="areaGrid" class="area-grid"></div>
+  </section>
 
-      <div class="badges">
-        <div class="badge">未経験歓迎</div>
-        <div class="badge">月収35〜70万円も可</div>
-        <div class="badge">車両リース・販売サポート</div>
-        <div class="badge">独立・開業サポート</div>
-        <div class="badge">フランチャイズ全国展開中</div>
-      </div>
-    </section>
+  <!-- お問い合わせ -->
+  <section class="card">
+    <h2>応募・お問い合わせ</h2>
+    <p class="lead">LINEからすぐに応募・相談ができます。</p>
+    <p><a href="https://lin.ee/UaNs9qNd">https://lin.ee/UaNs9qNd</a></p>
+  </section>
 
-    <!-- 検索フォーム -->
-    <section class="card">
-      <h2>全国エリア検索</h2>
-      <p class="lead">
-        お住まい・働きたい地域に近いエリアを選んでください。<br>
-        プルダウンから選んで「検索する」を押すと、各エリアの求人ページに移動します。
-      </p>
+</main>
 
-      <div class="search-wrap">
-        <div>
-          <label for="citySelect">市区町村（エリア選択）</label>
-          <select id="citySelect">
-            <option value="">選択してください</option>
-          </select>
-        </div>
+<footer>
+  株式会社OFA｜軽貨物フランチャイズネットワーク
+</footer>
 
-        <div>
-          <label for="keyword">フリーワード（将来拡張用）</label>
-          <input id="keyword" type="text" placeholder="例）福岡 中央区／大阪 南部 など">
-        </div>
-
-        <div>
-          <button type="button" class="search-button" onclick="searchArea()">検索する</button>
-        </div>
-      </div>
-    </section>
-
-    <!-- エリア一覧 -->
-    <section class="card">
-      <h2>募集エリア一覧（クリックでも移動できます）</h2>
-      <p class="lead">希望エリアをタップすると、そのエリア専用の求人ページ（/エリア名/index.html）に移動します。</p>
-
-      <div id="areaGrid" class="area-grid">
-        <!-- JSで自動生成 -->
-      </div>
-
-      <div class="pill-list">
-        <div class="pill">全国35エリアで展開中</div>
-        <div class="pill">今後も順次エリア追加予定</div>
-        <div class="pill">LINEでかんたん応募可</div>
-      </div>
-    </section>
-
-    <!-- お問い合わせ -->
-    <section class="card">
-      <h2>応募・お問い合わせ</h2>
-      <p class="lead">
-        気になるエリアがあれば、各ページから詳細条件をご確認のうえご応募ください。<br>
-        「まずは話だけ聞きたい」という方も歓迎です。
-      </p>
-      <p style="font-size:14px; margin-top:8px;">
-        ✅ LINE公式：<br>
-        <a href="https://lin.ee/UaNs9qNd" style="color:#1565c0; text-decoration:underline;">https://lin.ee/UaNs9qNd</a>
-      </p>
-    </section>
-  </main>
-
-  <footer>
-    <div>株式会社OFA｜軽貨物フランチャイズ・業務委託ネットワーク</div>
-    <small>ONE FOR ALL, ALL FOR ONE</small>
-  </footer>
 </body>
 </html>
