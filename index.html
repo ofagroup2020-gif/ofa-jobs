@@ -143,7 +143,7 @@
   </style>
 
   <script>
-    /* ---- エリア一覧（ここを編集すれば全自動反映） ---- */
+    /* ---- 全エリア定義（ここを編集すれば全箇所に反映） ---- */
     const AREAS = {
       "tokyo":            "東京都（西東京エリア）",
       "tokyo_super":      "東京都（ネットスーパー）",
@@ -178,7 +178,7 @@
         op.textContent = name;
         select.appendChild(op);
 
-        // グリッド一覧
+        // 一覧グリッド
         const a = document.createElement("a");
         a.href = `./${slug}/index.html`;
         a.innerHTML = `${name}<span>${slug}</span>`;
@@ -207,7 +207,6 @@
 
 <main>
 
-  <!-- 説明カード -->
   <section class="card">
     <h2>OFAの軽貨物フランチャイズとは？</h2>
     <p class="lead">
@@ -215,7 +214,6 @@
     </p>
   </section>
 
-  <!-- 検索 -->
   <section class="card">
     <h2>全国エリア検索</h2>
     <div class="search-wrap">
@@ -235,16 +233,14 @@
     </div>
   </section>
 
-  <!-- 一覧 -->
   <section class="card">
     <h2>募集エリア一覧（クリックで移動）</h2>
     <div id="areaGrid" class="area-grid"></div>
   </section>
 
-  <!-- お問い合わせ -->
   <section class="card">
     <h2>応募・お問い合わせ</h2>
-    <p class="lead">LINEからすぐに応募・相談できます。</p>
+    <p class="lead">LINEからすぐに応募・相談ができます。</p>
     <p><a href="https://lin.ee/UaNs9qNd">https://lin.ee/UaNs9qNd</a></p>
   </section>
 
