@@ -5,220 +5,289 @@
   <title>鹿児島市（ネットスーパー）軽貨物ドライバー求人｜株式会社OFA</title>
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description"
-    content="【鹿児島県/鹿児島市・ネットスーパー配送】株式会社OFAの軽貨物ドライバー求人ページ。時給制・高収入・初心者歓迎。安定稼働のネットスーパー案件でドライバーデビューしませんか？" />
-  <meta name="keywords"
-    content="鹿児島県,鹿児島市,ネットスーパー,配送ドライバー,軽貨物,委託ドライバー募集,OFA" />
-
-  <!-- OGP -->
-  <meta property="og:type" content="website" />
-  <meta property="og:title" content="鹿児島市（ネットスーパー）軽貨物ドライバー求人｜株式会社OFA" />
-  <meta property="og:description"
-    content="鹿児島県鹿児島市のネットスーパー配送ドライバー募集。安定案件・高収入・未経験歓迎。" />
-  <meta property="og:image" content="../img/ogp-ofa.jpg" />
-
-  <link rel="icon" href="../img/favicon.ico" />
+  <meta name="description" content="【鹿児島県/鹿児島市（ネットスーパー）／未経験歓迎】株式会社OFAのネットスーパー配送ドライバー求人ページ。日額19,000〜19,500円（税別）、土日休み・1日横乗り研修あり。将来はフランチャイズオーナーも目指せる環境です。" />
+  <meta name="keywords" content="鹿児島県,鹿児島市,ネットスーパー,軽貨物ドライバー求人,委託ドライバー募集,宅配ドライバー,フランチャイズ,株式会社OFA" />
 
   <style>
-    * { margin:0; padding:0; box-sizing:border-box; }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
     body {
-      font-family:-apple-system,BlinkMacSystemFont,"Yu Gothic","メイリオ",sans-serif;
-      line-height:1.7;
-      background:#f5f5f5;
-      color:#222;
+      font-family: -apple-system, BlinkMacSystemFont, "Hiragino Kaku Gothic ProN",
+                   "Yu Gothic", "メイリオ", sans-serif;
+      line-height: 1.7;
+      color: #222;
+      background: #f5f5f5;
     }
-    a { color:#ff9800; text-decoration:none; }
+    a { color: #ff9800; text-decoration: none; }
+    a:hover { text-decoration: underline; }
 
     header {
-      background:#ff9800;
-      color:#fff;
-      padding:18px;
-      border-bottom:4px solid #e65100;
+      background: #ffd54f;
+      padding: 16px;
+      border-bottom: 4px solid #ff9800;
     }
-    header .logo {
-      font-size:22px;
-      font-weight:bold;
-    }
+    .logo { font-size: 20px; font-weight: bold; }
+    .logo span { color: #e91e63; }
 
     main {
-      max-width:960px;
-      margin:0 auto;
-      padding:24px 16px;
-      background:#fff;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 24px 16px 80px;
+      background: #fff;
     }
 
     .hero {
-      display:grid;
-      grid-template-columns:1fr 1fr;
-      gap:16px;
-      align-items:center;
+      display: grid;
+      grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
+      gap: 16px;
+      align-items: center;
     }
     .hero-title {
-      font-size:26px;
-      font-weight:bold;
-      margin-bottom:8px;
+      font-size: 26px;
+      font-weight: bold;
+      margin-bottom: 8px;
     }
-    .badge {
-      display:inline-block;
-      background:#d84315;
-      color:#fff;
-      padding:4px 10px;
-      border-radius:999px;
-      font-size:12px;
-      margin-bottom:6px;
+    .hero-badge {
+      display: inline-block;
+      background: #ff5722;
+      color: #fff;
+      padding: 4px 12px;
+      border-radius: 999px;
+      font-size: 12px;
+      margin-bottom: 8px;
     }
-    .hero img {
-      width:100%;
-      border-radius:8px;
+    .hero-lead {
+      font-size: 15px;
+      margin-bottom: 12px;
     }
+    .hero-points {
+      list-style: none;
+      font-size: 14px;
+    }
+    .hero-points li::before {
+      content: "✔";
+      color: #4caf50;
+      margin-right: 4px;
+    }
+    .hero-img { text-align: center; }
+    .hero-img img { max-width: 100%; height: auto; }
 
-    h2 {
-      font-size:20px;
-      margin:28px 0 10px;
-      border-left:5px solid #ff9800;
-      padding-left:8px;
+    .section {
+      margin-top: 32px;
+      padding-top: 24px;
+      border-top: 1px solid #eee;
+    }
+    .section h2 {
+      font-size: 20px;
+      margin-bottom: 12px;
+      position: relative;
+    }
+    .section h2::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -4px;
+      width: 60px;
+      height: 3px;
+      background: #ff9800;
     }
 
     .chips {
-      display:flex;
-      flex-wrap:wrap;
-      gap:6px;
-      margin-bottom:12px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 12px;
     }
     .chip {
-      font-size:12px;
-      padding:4px 10px;
-      border-radius:999px;
-      border:1px solid #ccc;
-      background:#fafafa;
+      font-size: 12px;
+      padding: 4px 10px;
+      border-radius: 999px;
+      border: 1px solid #ccc;
+      background: #fafafa;
     }
 
-    .columns {
-      display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-      gap:16px;
+    .columns-2 {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 16px;
+      font-size: 14px;
     }
     .card {
-      background:#fafafa;
-      padding:14px;
-      border-radius:8px;
-      border:1px solid #eee;
+      background: #fafafa;
+      border-radius: 8px;
+      padding: 12px 14px;
+      border: 1px solid #eee;
+    }
+    .card h3 {
+      font-size: 16px;
+      margin-bottom: 6px;
+    }
+    .card ul {
+      list-style: none;
+      margin-left: 0;
+    }
+    .card ul li {
+      padding-left: 1em;
+      text-indent: -1em;
+      margin-bottom: 4px;
+    }
+    .card ul li::before {
+      content: "・";
+      color: #ff9800;
+      margin-right: 2px;
     }
 
     .cta {
-      text-align:center;
-      margin-top:32px;
+      margin-top: 32px;
+      text-align: center;
     }
     .cta-btn {
-      display:inline-block;
-      background:#00c853;
-      padding:14px 28px;
-      color:#fff;
-      font-size:18px;
-      border-radius:999px;
-      font-weight:bold;
-      box-shadow:0px 4px 0px #009624;
+      display: inline-block;
+      background: #00c853;
+      color: #fff;
+      padding: 14px 32px;
+      font-size: 18px;
+      border-radius: 999px;
+      font-weight: bold;
+      box-shadow: 0 4px 0 #009624;
     }
     .cta-btn span {
-      display:block;
-      font-size:13px;
-      font-weight:normal;
-      margin-top:4px;
+      font-size: 13px;
+      display: block;
+      font-weight: normal;
+    }
+    .cta-note {
+      font-size: 12px;
+      margin-top: 8px;
+      color: #555;
     }
 
     footer {
-      margin-top:40px;
-      background:#212121;
-      color:#eee;
-      padding:18px;
-      font-size:12px;
-      text-align:center;
+      background: #212121;
+      color: #eee;
+      font-size: 12px;
+      padding: 16px;
+      margin-top: 32px;
     }
+    footer a { color: #ffc107; }
 
-    @media(max-width:640px){
-      .hero { grid-template-columns:1fr; }
-      .hero-title { font-size:22px; }
+    @media (max-width: 640px) {
+      .hero { grid-template-columns: 1fr; }
+      .hero-title { font-size: 22px; }
     }
   </style>
 </head>
-
 <body>
 
 <header>
-  <div class="logo">OFA GROUP｜鹿児島市（ネットスーパー）求人</div>
+  <div class="logo">
+    <span>OFA</span> GROUP｜軽貨物フランチャイズ
+  </div>
 </header>
 
 <main>
-
-  <!-- HERO -->
+  <!-- ヒーロー -->
   <section class="hero">
     <div>
-      <div class="badge">鹿児島県/鹿児島市・ネットスーパードライバー募集</div>
-      <div class="hero-title">安定稼働のネットスーパー配送案件<br>未経験から月収安定。</div>
-      <p>
-        ネットスーパー配送は「決まったルートと件数」で安定して働ける人気案件です。  
-        株式会社OFAでは、鹿児島市エリアで新しい仲間を募集しています。
+      <div class="hero-badge">鹿児島県/鹿児島市（ネットスーパー）・軽貨物ドライバー募集</div>
+      <h1 class="hero-title">ネットスーパー配送で、<br>平日しっかり稼げる案件です。</h1>
+      <p class="hero-lead">
+        株式会社OFAは、鹿児島市エリアのネットスーパー案件の追加ドライバーを募集しています。  
+        日額19,000〜19,500円（税別）、土日休みで
+        「安定して稼ぎつつプライベートも大事にしたい」方にぴったりの案件です。
       </p>
-      <ul style="margin-top:10px; font-size:14px;">
-        <li>未経験でもすぐできるシンプル配送</li>
-        <li>時給制 or 出来高制（エリアにより選択）</li>
-        <li>安定稼働／シフト相談OK</li>
+      <ul class="hero-points">
+        <li>未経験OK｜1日横乗り研修あり</li>
+        <li>曜日固定：月〜金（祝日あり）・土日休み</li>
+        <li>ネットスーパー経験者は日額＋500円優遇</li>
       </ul>
     </div>
-    <div><img src="../img/ofa-driver-main.jpg" alt="ネットスーパードライバー"></div>
+    <div class="hero-img">
+      <!-- 画像パスは環境に合わせて変更してください -->
+      <img src="../img/ofa-net-super.jpg" alt="ネットスーパー配送イメージ">
+    </div>
   </section>
 
-  <!-- POINT -->
-  <h2>鹿児島市（ネットスーパー）｜募集のポイント</h2>
+  <!-- 募集概要 -->
+  <section class="section">
+    <h2>鹿児島市（ネットスーパー）案件の募集概要</h2>
 
-  <div class="chips">
-    <div class="chip">未経験歓迎</div>
-    <div class="chip">安定稼働</div>
-    <div class="chip">女性ドライバー活躍中</div>
-    <div class="chip">車両リースOK</div>
-  </div>
-
-  <div class="columns">
-    <div class="card">
-      <h3>報酬モデル</h3>
-      <ul style="font-size:14px;">
-        <li>時給：1,200〜1,600円（エリアにより変動）</li>
-        <li>出来高制：1件あたり150〜200円</li>
-        <li>平均日収：10,000〜16,000円</li>
-      </ul>
+    <div class="chips">
+      <div class="chip">日額19,000〜19,500円（税別）</div>
+      <div class="chip">月〜金の平日稼働</div>
+      <div class="chip">土日休み</div>
+      <div class="chip">1日横乗り研修あり</div>
     </div>
 
-    <div class="card">
-      <h3>仕事内容</h3>
-      <ul style="font-size:14px;">
-        <li>ネットスーパー商品の配送</li>
-        <li>軽バンでの個宅配送</li>
-        <li>レジ業務・接客は一切なし</li>
-      </ul>
-    </div>
-  </div>
+    <div class="columns-2">
+      <div class="card">
+        <h3>案件概要</h3>
+        <ul>
+          <li>案件種別：ネットスーパー配送</li>
+          <li>車種　　：軽バン</li>
+          <li>稼働開始：即日〜応相談（1日横乗り研修あり）</li>
+          <li>配送エリア：デポ近隣の住宅街・マンション</li>
+        </ul>
 
-  <!-- FLOW -->
-  <h2>応募の流れ</h2>
-  <ol style="font-size:14px; margin-left:18px;">
-    <li>LINEまたはフォームから応募</li>
-    <li>担当より案件説明</li>
-    <li>車両確認・研修</li>
-    <li>稼働開始</li>
-  </ol>
+        <h3 style="margin-top:8px;">運賃（報酬）</h3>
+        <ul>
+          <li>日額：19,000〜19,500円（税別）</li>
+          <li>ネットスーパー経験者は【日額＋500円】優遇</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h3>稼働条件</h3>
+        <ul>
+          <li>稼働時間：9:00着車</li>
+          <li>曜日　　：月〜金（平日）※祝日あり</li>
+          <li>土日　　：お休み</li>
+        </ul>
+
+        <h3 style="margin-top:8px;">時間帯（6便制）</h3>
+        <ul>
+          <li>10:00〜12:00</li>
+          <li>12:00〜14:00</li>
+          <li>14:00〜16:00</li>
+          <li>16:00〜18:00</li>
+          <li>18:00〜20:00</li>
+          <li>20:00〜22:00</li>
+        </ul>
+      </div>
+    </div>
+
+    <p style="font-size:13px; margin-top:10px;">
+      ご応募前に<strong>1日横乗り研修</strong>がありますので、
+      未経験の方でも現場の雰囲気を掴んでからスタートできます。
+    </p>
+  </section>
+
+  <!-- 応募の流れ -->
+  <section class="section">
+    <h2>応募の流れ</h2>
+    <ol style="font-size:14px; margin-left:16px;">
+      <li>LINE公式から「鹿児島ネットスーパー案件希望」とメッセージ</li>
+      <li>担当よりエリア・条件のご説明</li>
+      <li>1日横乗り研修の日程調整</li>
+      <li>業務委託契約の締結・稼働開始</li>
+    </ol>
+  </section>
 
   <!-- CTA -->
-  <div class="cta">
-    <a class="cta-btn" href="https://lin.ee/UaNs9qNd" target="_blank">
-      今すぐLINEで問い合わせる
-      <span>※「鹿児島ネットスーパー求人を見た」と送ってください。</span>
+  <section class="cta">
+    <a class="cta-btn" href="https://lin.ee/UaNs9qNd" target="_blank" rel="noopener">
+      LINEで応募・問い合わせをする
+      <span>※ メッセージ冒頭に「鹿児島ネットスーパー案件希望」と入力してください。</span>
     </a>
-  </div>
-
+    <p class="cta-note">
+      条件の詳細やスタート時期など、まずはお気軽にご相談ください。
+    </p>
+  </section>
 </main>
 
 <footer>
-  株式会社OFA｜ONE FOR ALL, ALL FOR ONE.
+  <div>運営：株式会社OFA</div>
+  <div>OFAグループ本部／フランチャイズ運営本部 ほか</div>
+  <div style="margin-top:4px;">ONE FOR ALL, ALL FOR ONE.</div>
 </footer>
 
 </body>
