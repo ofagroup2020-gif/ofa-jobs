@@ -65,22 +65,6 @@
       color: #555;
     }
 
-    .badges {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 6px;
-      margin-top: 4px;
-    }
-    .badge {
-      font-size: 12px;
-      padding: 3px 8px;
-      border-radius: 999px;
-      background: #fff3cd;
-      color: #7a5a00;
-      border: 1px solid #ffe08a;
-    }
-
-    /* 検索フォーム */
     .search-wrap {
       display: grid;
       grid-template-columns: 1fr;
@@ -114,7 +98,6 @@
     }
     .search-button:hover { opacity: .92; }
 
-    /* エリア一覧 */
     .area-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
@@ -132,16 +115,16 @@
       border: 1px solid #e0e0e0;
       transition: .15s;
     }
+    .area-grid a:hover {
+      background: #fff8e1;
+      border-color: #ff9800;
+      transform: translateY(-1px);
+    }
     .area-grid a span {
       display: block;
       font-size: 11px;
       color: #777;
       margin-top: 2px;
-    }
-    .area-grid a:hover {
-      background: #fff8e1;
-      border-color: #ff9800;
-      transform: translateY(-1px);
     }
 
     footer {
@@ -160,26 +143,26 @@
   </style>
 
   <script>
-    /* ---- 表示エリア一覧 ---- */
+    /* ---- エリア一覧（ここを編集すれば全自動反映） ---- */
     const AREAS = {
-      "tokyo":          "東京都（西東京エリア）",
-      "tokyo_super":    "東京都（ネットスーパー）",
-      "osaka":          "大阪市",
-      "osaka-south":    "大阪南部",
-      "osaka_super":    "大阪市（ネットスーパー）",
-      "fukuoka":        "福岡市",
-      "fukuoka_super":  "福岡市（ネットスーパー）",
-      "kumamoto":       "熊本市",
-      "kumamoto_super": "熊本市（ネットスーパー）",
-      "kagoshima":      "鹿児島市",
-      "saitama":        "埼玉県",
-      "kobe":           "神戸市",
-      "kyoto":          "京都市",
-      "oita":           "大分市",
-      "nagasaki":       "長崎市",
-      "miyazaki":       "宮崎市",
-      "shizuoka":       "静岡市"
-      /* 必要ならここに追加 */
+      "tokyo":            "東京都（西東京エリア）",
+      "tokyo_super":      "東京都（ネットスーパー）",
+      "osaka":            "大阪市",
+      "osaka-south":      "大阪南部",
+      "osaka_super":      "大阪市（ネットスーパー）",
+      "fukuoka":          "福岡市",
+      "fukuoka_super":    "福岡市（ネットスーパー）",
+      "kumamoto":         "熊本市",
+      "kumamoto_super":   "熊本市（ネットスーパー）",
+      "kagoshima":        "鹿児島市",
+      "kagoshima_super":  "鹿児島市（ネットスーパー）",
+      "saitama":          "埼玉県",
+      "kobe":             "神戸市",
+      "kyoto":            "京都市",
+      "oita":             "大分市",
+      "nagasaki":         "長崎市",
+      "miyazaki":         "宮崎市",
+      "shizuoka":         "静岡市"
     };
 
     window.addEventListener("DOMContentLoaded", () => {
@@ -232,7 +215,7 @@
     </p>
   </section>
 
-  <!-- 検索カード -->
+  <!-- 検索 -->
   <section class="card">
     <h2>全国エリア検索</h2>
     <div class="search-wrap">
@@ -261,7 +244,7 @@
   <!-- お問い合わせ -->
   <section class="card">
     <h2>応募・お問い合わせ</h2>
-    <p class="lead">LINEからすぐに応募・相談ができます。</p>
+    <p class="lead">LINEからすぐに応募・相談できます。</p>
     <p><a href="https://lin.ee/UaNs9qNd">https://lin.ee/UaNs9qNd</a></p>
   </section>
 
