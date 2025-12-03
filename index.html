@@ -112,7 +112,9 @@
       font-weight: 700;
       box-shadow: 0 6px 16px rgba(0,200,83,.45);
     }
+    .search-button:hover { opacity: .92; }
 
+    /* エリア一覧 */
     .area-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
@@ -129,6 +131,12 @@
       color: #1565c0;
       border: 1px solid #e0e0e0;
       transition: .15s;
+    }
+    .area-grid a span {
+      display: block;
+      font-size: 11px;
+      color: #777;
+      margin-top: 2px;
     }
     .area-grid a:hover {
       background: #fff8e1;
@@ -154,41 +162,41 @@
   <script>
     /* ---- 表示エリア一覧 ---- */
     const AREAS = {
-      "tokyo": "東京都（西東京エリア）",
-      "tokyo_super": "東京都（ネットスーパー）",
-      "osaka": "大阪市",
-      "osaka-south": "大阪南部",
-      "fukuoka": "福岡市",
-      "kumamoto": "熊本市",
-      "kagoshima": "鹿児島市",
-      "saitama": "埼玉県",
-      "kobe": "神戸市",
-      "kyoto": "京都市",
-      "oita": "大分市",
-      "nagasaki": "長崎市",
-      "miyazaki": "宮崎市",
-      "shizuoka": "静岡市"
-      "fukuoka_super": "福岡市（ネットスーパー）",
-"osaka_super": "大阪市（ネットスーパー）",
-"kumamoto_super": "熊本市（ネットスーパー）",
-      /* 必要なら追加可能 */
+      "tokyo":          "東京都（西東京エリア）",
+      "tokyo_super":    "東京都（ネットスーパー）",
+      "osaka":          "大阪市",
+      "osaka-south":    "大阪南部",
+      "osaka_super":    "大阪市（ネットスーパー）",
+      "fukuoka":        "福岡市",
+      "fukuoka_super":  "福岡市（ネットスーパー）",
+      "kumamoto":       "熊本市",
+      "kumamoto_super": "熊本市（ネットスーパー）",
+      "kagoshima":      "鹿児島市",
+      "saitama":        "埼玉県",
+      "kobe":           "神戸市",
+      "kyoto":          "京都市",
+      "oita":           "大分市",
+      "nagasaki":       "長崎市",
+      "miyazaki":       "宮崎市",
+      "shizuoka":       "静岡市"
+      /* 必要ならここに追加 */
     };
 
     window.addEventListener("DOMContentLoaded", () => {
       const select = document.getElementById("citySelect");
-      const grid = document.getElementById("areaGrid");
+      const grid   = document.getElementById("areaGrid");
 
       Object.keys(AREAS).forEach(slug => {
-        let name = AREAS[slug];
+        const name = AREAS[slug];
 
         // セレクト項目
-        let op = document.createElement("option");
+        const op = document.createElement("option");
         op.value = slug;
         op.textContent = name;
         select.appendChild(op);
 
         // グリッド一覧
-        let a = document.createElement("a");
+        const a = document.createElement("a");
         a.href = `./${slug}/index.html`;
         a.innerHTML = `${name}<span>${slug}</span>`;
         grid.appendChild(a);
@@ -197,7 +205,10 @@
 
     function searchArea() {
       const city = document.getElementById("citySelect").value;
-      if (!city) return alert("エリアを選択してください");
+      if (!city) {
+        alert("エリアを選択してください");
+        return;
+      }
       location.href = `./${city}/index.html`;
     }
   </script>
