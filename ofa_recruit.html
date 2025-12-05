@@ -6,7 +6,6 @@
 <title>OFA GROUP｜軽貨物ドライバー採用</title>
 
 <style>
-  /* ベース */
   * { box-sizing: border-box; }
   body {
     margin: 0;
@@ -22,7 +21,6 @@
     padding: 18px 18px 40px;
   }
 
-  /* ロゴ */
   .logo-box {
     text-align: center;
     margin-top: 10px;
@@ -33,7 +31,6 @@
     filter: drop-shadow(0 4px 14px rgba(0,0,0,0.4));
   }
 
-  /* 小さなラベル */
   .pill {
     display: inline-block;
     padding: 3px 10px;
@@ -42,16 +39,14 @@
     border-radius: 999px;
     background: rgba(0,0,0,0.65);
     color: #FFEB3B;
-    letter-spacing: .04em;
   }
 
-  /* HERO カード */
   .hero {
     margin-top: 18px;
     background: rgba(255,255,255,0.18);
     backdrop-filter: blur(7px);
     border-radius: 26px;
-    padding: 22px 18px 22px;
+    padding: 22px 18px;
     text-align: center;
     box-shadow: 0 10px 28px rgba(0,0,0,0.28);
   }
@@ -67,14 +62,7 @@
     opacity: 0.95;
     line-height: 1.7;
   }
-  .hero-num {
-    margin-top: 8px;
-    font-size: 12px;
-    font-weight: 700;
-    opacity: 0.9;
-  }
 
-  /* タグ */
   .tag-list {
     margin-top: 14px;
     display: flex;
@@ -89,10 +77,8 @@
     font-size: 11px;
     font-weight: 800;
     color: #511010;
-    white-space: nowrap;
   }
 
-  /* ボタン */
   .btn {
     margin-top: 18px;
     width: 100%;
@@ -104,27 +90,21 @@
     background: #ffffff;
     color: #FF3360;
     box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+    display: block;
   }
   .btn-line {
     margin-top: 10px;
     background: #06C755;
     color: #fff;
-    box-shadow: 0 8px 18px rgba(0,0,0,0.25);
-  }
-  .btn-note {
-    margin-top: 6px;
-    font-size: 10px;
-    opacity: 0.9;
   }
 
-  /* セクション共通 */
   .section {
     margin-top: 22px;
-    padding: 18px 16px 18px;
+    padding: 18px 16px;
     border-radius: 20px;
     background: rgba(255,255,255,0.14);
-    backdrop-filter: blur(5px);
   }
+
   .section-header {
     display: flex;
     align-items: baseline;
@@ -137,143 +117,10 @@
     padding: 2px 8px;
     border-radius: 999px;
     background: rgba(0,0,0,0.75);
-    letter-spacing: .06em;
-    text-transform: uppercase;
   }
   .section-title {
     font-size: 18px;
     font-weight: 900;
-  }
-  .section-lead {
-    font-size: 13px;
-    opacity: 0.95;
-    line-height: 1.7;
-    font-weight: 600;
-  }
-
-  /* 箇条書き・強調行 */
-  .bullet {
-    margin-top: 10px;
-    font-size: 13px;
-    font-weight: 700;
-    line-height: 1.7;
-  }
-  .bullet span.key {
-    font-weight: 900;
-    font-size: 14px;
-  }
-  .bullet span.sub {
-    opacity: 0.9;
-    font-weight: 500;
-    font-size: 12px;
-  }
-
-  /* 2カラムカード（POINTなど） */
-  .grid {
-    margin-top: 10px;
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 10px;
-  }
-  @media (min-width: 400px) {
-    .grid-2 {
-      grid-template-columns: repeat(2, 1fr);
-    }
-  }
-  .card {
-    padding: 10px 10px 12px;
-    border-radius: 14px;
-    background: rgba(0,0,0,0.65);
-    border: 1px solid rgba(255,255,255,0.08);
-    font-size: 12px;
-  }
-  .card-label {
-    font-size: 10px;
-    font-weight: 800;
-    color: #FFEB3B;
-    margin-bottom: 4px;
-    letter-spacing: .08em;
-  }
-  .card-title {
-    font-weight: 800;
-    margin-bottom: 4px;
-    font-size: 13px;
-  }
-  .card-body {
-    font-size: 11px;
-    opacity: 0.9;
-    line-height: 1.7;
-  }
-
-  /* エリア */
-  .area-chip {
-    display: inline-block;
-    margin: 3px 4px;
-    padding: 5px 8px;
-    border-radius: 999px;
-    background: rgba(0,0,0,0.6);
-    font-size: 11px;
-    font-weight: 700;
-  }
-  .area-block-title {
-    font-size: 12px;
-    font-weight: 900;
-    margin-top: 4px;
-  }
-
-  /* フロー */
-  .flow-card {
-    padding: 10px 10px 12px;
-    border-radius: 14px;
-    background: rgba(0,0,0,0.7);
-    border: 1px solid rgba(255,255,255,0.1);
-    font-size: 12px;
-    position: relative;
-  }
-  .flow-step {
-    position: absolute;
-    top: 8px;
-    right: 10px;
-    font-size: 10px;
-    font-weight: 900;
-    padding: 2px 8px;
-    border-radius: 999px;
-    background: #FFEB3B;
-    color: #000;
-  }
-  .flow-title {
-    font-weight: 800;
-    margin-bottom: 4px;
-    font-size: 13px;
-  }
-
-  /* FAQ */
-  .faq-item {
-    margin-top: 10px;
-    padding: 10px 10px 11px;
-    border-radius: 12px;
-    background: rgba(0,0,0,0.7);
-    border: 1px solid rgba(255,255,255,0.12);
-    font-size: 12px;
-  }
-  .faq-q {
-    font-weight: 900;
-    margin-bottom: 3px;
-  }
-
-  /* 最後のCTA */
-  .cta-bottom {
-    text-align: center;
-    margin-top: 26px;
-    font-size: 13px;
-    font-weight: 600;
-    line-height: 1.8;
-  }
-  .cta-bottom strong {
-    font-size: 15px;
-  }
-  .cta-btn-wrap {
-    margin-top: 10px;
   }
 
   footer {
@@ -288,247 +135,50 @@
 <body>
 <div class="container">
 
-  <!-- ロゴ -->
   <div class="logo-box">
     <img src="ofa_logo.png" alt="OFA GROUP ロゴ">
   </div>
 
-  <!-- HERO -->
   <section class="hero">
     <div class="pill">軽貨物フランチャイズ / ドライバー採用</div>
     <h1>軽バン1台から、<br>「人生を取り戻す」働き方へ。</h1>
     <div class="hero-sub">
-      未経験OK ／ フランチャイズ独立OK ／ 案件豊富で安定収入<br>
-      <span style="font-weight:900;">ガチで稼ぎたい人</span> のための軽貨物フランチャイズです。
-    </div>
-    <div class="hero-num">
-      OFAグループ　加盟<span style="font-size:14px;font-weight:900;">543名</span>ドライバー ／ 車両<span style="font-size:14px;font-weight:900;">540台</span> ／ 全国拡大中
+      未経験OK ／ フランチャイズ独立OK ／ 案件豊富で安定収入
     </div>
 
     <div class="tag-list">
-      <span class="tag">月収50〜80万円も現実的</span>
-      <span class="tag">未経験スタート8割以上</span>
-      <span class="tag">車両サポートあり</span>
-      <span class="tag">フランチャイズ独立OK</span>
-      <span class="tag">案件が豊富で安定</span>
+      <span class="tag">月収50〜80万円</span>
+      <span class="tag">未経験8割</span>
+      <span class="tag">案件豊富</span>
+      <span class="tag">独立OK</span>
     </div>
 
-    <!-- ▼ ここをあなたのGoogleフォームURLに変更 -->
-    <a href="YOUR_GOOGLE_FORM_URL" class="btn">30秒で仮エントリーする</a>
-
+    <!-- ボタン（紹介者 tracking 対応版） -->
+    <a href="#" class="btn entry-btn">30秒で仮エントリーする</a>
     <a href="https://lin.ee/NaHASQp" class="btn btn-line">LINEで相談する</a>
-    <div class="btn-note">※ 応募＝即契約ではありません。まずは「話を聞いてみるだけ」でOKです。</div>
   </section>
-
-  <!-- WHY OFA -->
-  <section class="section">
-    <div class="section-header">
-      <div class="section-label">Why OFA?</div>
-      <div class="section-title">OFAが選ばれる5つの理由</div>
-    </div>
-    <div class="section-lead">
-      「とりあえず稼げればいい」ではなく、<br>
-      <span style="font-weight:900;">数字と仕組みで“継続して稼げる”</span> ように設計しているのがOFAです。
-    </div>
-
-    <div class="grid grid-2">
-      <div class="card">
-        <div class="card-label">POINT 01</div>
-        <div class="card-title">案件が豊富。だから収入が安定。</div>
-        <div class="card-body">
-          宅配・ルート・スポット・企業配まで、<br>
-          現場を熟知した本部が案件を組み立て。<br>
-          <span style="font-weight:800;">「稼げない現場」には入れません。</span>
-        </div>
-      </div>
-      <div class="card">
-        <div class="card-label">POINT 02</div>
-        <div class="card-title">月収50〜80万円も現実的。</div>
-        <div class="card-body">
-          エリア・稼働日数・単価から、<br>
-          <span style="font-weight:800;">“逆算で収入シミュレーション”</span> を実施。<br>
-          目標額から案件を組むのでブレが少ない。
-        </div>
-      </div>
-      <div class="card">
-        <div class="card-label">POINT 03</div>
-        <div class="card-title">未経験スタート8割以上。</div>
-        <div class="card-body">
-          同乗研修・マニュアル・グループLINE。<br>
-          「最初の3ヶ月」で挫折させない仕組みあり。
-        </div>
-      </div>
-      <div class="card">
-        <div class="card-label">POINT 04</div>
-        <div class="card-title">フランチャイズ独立OK。</div>
-        <div class="card-body">
-          ドライバー → リーダー → 案件オーナー → 拠点長へ。<br>
-          <span style="font-weight:800;">“軽バン1台からオーナーへ”</span> の道があります。
-        </div>
-      </div>
-      <div class="card">
-        <div class="card-label">POINT 05</div>
-        <div class="card-title">代表が現場叩き上げ。</div>
-        <div class="card-body">
-          机上の空論ではなく、現場で数字を作ってきたからこそ、<br>
-          <span style="font-weight:800;">「こうすれば稼げる」が言い切れます。</span>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- FOR WHO -->
-  <section class="section">
-    <div class="section-header">
-      <div class="section-label">For you</div>
-      <div class="section-title">こんな方に、OFAはハマります。</div>
-    </div>
-
-    <div class="bullet">
-      <span class="key">■ 今より「月＋10〜20万円」欲しい</span><br>
-      <span class="sub">→ 副業／本業の切り替えも相談できます。</span>
-    </div>
-    <div class="bullet">
-      <span class="key">■ 自分の頑張りが“そのまま収入”に反映されてほしい</span><br>
-      <span class="sub">→ 歩合・出来高で、数字がダイレクトに返ってきます。</span>
-    </div>
-    <div class="bullet">
-      <span class="key">■ 将来は独立・自分の看板で仕事がしたい</span><br>
-      <span class="sub">→ フランチャイズ独立・案件オーナーのステップを用意。</span>
-    </div>
-    <div class="bullet">
-      <span class="key">■ 「やるなら本気でやる」タイプだと思う</span><br>
-      <span class="sub">→ 自責・前向きな仲間ばかりの環境です。</span>
-    </div>
-  </section>
-
-  <!-- AREA -->
-  <section class="section">
-    <div class="section-header">
-      <div class="section-label">Area</div>
-      <div class="section-title">募集エリア（全国拡大中）</div>
-    </div>
-    <div class="section-lead">
-      タイミングにより募集状況は変動しますが、現在は下記エリアで随時ドライバーを募集しています。
-    </div>
-
-    <div style="margin-top:10px;">
-      <div class="area-block-title">関東</div>
-      <span class="area-chip">東京</span>
-      <span class="area-chip">千葉</span>
-      <span class="area-chip">埼玉</span>
-      <span class="area-chip">神奈川</span>
-
-      <div class="area-block-title">中部・関西</div>
-      <span class="area-chip">愛知</span>
-      <span class="area-chip">大阪</span>
-      <span class="area-chip">京都</span>
-
-      <div class="area-block-title">中国・四国</div>
-      <span class="area-chip">広島</span>
-      <span class="area-chip">兵庫</span>
-      <span class="area-chip">愛媛</span>
-      <span class="area-chip">高知</span>
-      <span class="area-chip">徳島</span>
-
-      <div class="area-block-title">九州・沖縄</div>
-      <span class="area-chip">福岡</span>
-      <span class="area-chip">熊本</span>
-      <span class="area-chip">鹿児島</span>
-      <span class="area-chip">宮崎</span>
-      <span class="area-chip">長崎</span>
-      <span class="area-chip">佐賀</span>
-      <span class="area-chip">大分</span>
-      <span class="area-chip">沖縄</span>
-    </div>
-  </section>
-
-  <!-- FLOW -->
-  <section class="section">
-    <div class="section-header">
-      <div class="section-label">Flow</div>
-      <div class="section-title">応募〜稼働までの流れ</div>
-    </div>
-
-    <div class="grid">
-      <div class="flow-card">
-        <div class="flow-step">STEP 1</div>
-        <div class="flow-title">30秒で仮エントリー</div>
-        <div class="card-body">
-          このページのエントリーボタンから、<br>
-          お名前・エリア・希望収入など、<span style="font-weight:800;">最低限の情報だけ</span>送信していただきます。
-        </div>
-      </div>
-      <div class="flow-card">
-        <div class="flow-step">STEP 2</div>
-        <div class="flow-title">担当者からご連絡</div>
-        <div class="card-body">
-          LINEまたはお電話でご連絡。<br>
-          希望や不安をヒアリングし、面談の日程を調整します。
-        </div>
-      </div>
-      <div class="flow-card">
-        <div class="flow-step">STEP 3</div>
-        <div class="flow-title">オンライン／対面面談</div>
-        <div class="card-body">
-          目標収入・働き方・エリアをもとに、<br>
-          <span style="font-weight:800;">具体的な案件・収入シミュレーション</span> をお見せします。
-        </div>
-      </div>
-      <div class="flow-card">
-        <div class="flow-step">STEP 4</div>
-        <div class="flow-title">契約・準備・スタート</div>
-        <div class="card-body">
-          電子契約・車両手配・研修を経て、稼働スタート。<br>
-          稼働後もLINEでフォローしていきます。
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- FAQ -->
-  <section class="section">
-    <div class="section-header">
-      <div class="section-label">FAQ</div>
-      <div class="section-title">よくある質問</div>
-    </div>
-
-    <div class="faq-item">
-      <div class="faq-q">Q. 本当に未経験でも大丈夫ですか？</div>
-      <div>A. 大丈夫です。OFAでは <span style="font-weight:800;">未経験スタートが8割以上</span>。同乗研修やマニュアル、グループLINEでのフォローがあります。</div>
-    </div>
-
-    <div class="faq-item">
-      <div class="faq-q">Q. どのくらい稼げますか？</div>
-      <div>A. エリア・稼働日数にもよりますが、<span style="font-weight:800;">月収50〜70万円が目安</span>。頑張る方は80万円以上も目指せます。</div>
-    </div>
-
-    <div class="faq-item">
-      <div class="faq-q">Q. 車両を持っていません。</div>
-      <div>A. リース・レンタルなどの車両サポートがあります。フォームで「車両サポート希望」を選んでください。</div>
-    </div>
-
-    <div class="faq-item">
-      <div class="faq-q">Q. いきなりフランチャイズは不安です。</div>
-      <div>A. ほとんどの方が、まずはドライバーからスタートしています。現場に慣れた上で、タイミングを一緒に考えていきます。</div>
-    </div>
-  </section>
-
-  <!-- CTA BOTTOM -->
-  <div class="cta-bottom">
-    <strong>あなたの人生は、あなたの選択で変わります。</strong><br>
-    軽バン1台から、人生を取り戻してきた仲間が全国にいます。<br>
-    少しでも気になった今が、動き出すタイミングかもしれません。
-    <div class="cta-btn-wrap">
-      <a href="YOUR_GOOGLE_FORM_URL" class="btn" style="margin-top:12px;">30秒で仮エントリーする</a>
-      <a href="https://lin.ee/NaHASQp" class="btn btn-line" style="margin-top:10px;">LINEで相談する</a>
-    </div>
-  </div>
 
   <footer>
-    © 株式会社OFA / OFA GROUP - ONE FOR ALL, ALL FOR ONE
+    © OFA GROUP
   </footer>
 
 </div>
+
+<script>
+  // ★ あなたのGoogleフォームURLをここに入れる
+  const FORM_BASE_URL = "YOUR_GOOGLE_FORM_URL";
+
+  const params = new URLSearchParams(window.location.search);
+  const ref = params.get("ref") || "";
+
+  document.querySelectorAll(".entry-btn").forEach(btn => {
+    let url = FORM_BASE_URL;
+    if (ref) {
+      url += (FORM_BASE_URL.includes("?") ? "&" : "?") + "ref=" + encodeURIComponent(ref);
+    }
+    btn.href = url;
+  });
+</script>
+
 </body>
 </html>
