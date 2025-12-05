@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>軽貨物ドライバー採用｜株式会社OFA</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="全国拡大中の軽貨物フランチャイズOFAグループ。未経験歓迎・車両サポートあり・月収50〜80万円も可能。まずは30秒で仮エントリー。">
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", sans-serif;
+      background: #050505;
+      color: #fff;
+      line-height: 1.6;
+    }
+    a { color: inherit; }
+
+    header {
+      padding: 10px 16px;
+      background: #000;
+      border-bottom: 1px solid #333;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .logo-wrap {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .logo-wrap img {
+      height: 40px;
+    }
+    .logo-text {
+      font-size: 11px;
+      color: #ccc;
+    }
+
+    .container {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 16px;
+    }
+
+    .hero {
+      margin-top: 16px;
+      padding: 24px 18px 22px;
+      border-radius: 18px;
+      background: radial-gradient(circle at top left, #ffeb3b 0, #ff9800 30%, #ff3b30 60%, #1e1e1e 100%);
+      color: #000;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-image:
+        radial-gradient(circle at 10% 20%, rgba(255,255,255,.18) 0, transparent 40%),
+        radial-gradient(circle at 80% 0%, rgba(255,255,255,.12) 0, transparent 50%);
+      opacity: 0.7;
+      pointer-events: none;
+    }
+    .hero-inner {
+      position: relative;
+      z-index: 1;
+    }
+    .hero-badge-top {
+      display: inline-block;
+      font-size: 11px;
+      font-weight: 700;
+      padding: 2px 10px;
+      border-radius: 999px;
+      background: #000;
+      color: #ffeb3b;
+      margin-bottom: 6px;
+    }
+    .hero h1 {
+      margin: 0 0 6px;
+      font-size: 24px;
+      font-weight: 900;
+      letter-spacing: .02em;
+    }
+    .hero p {
+      margin: 2px 0;
+      font-size: 13px;
+    }
+    .hero-badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-top: 10px;
+    }
+    .hero-badge {
+      font-size: 11px;
+      padding: 3px 9px;
+      border-radius: 999px;
+      background: #000;
+      color: #ffeb3b;
+      font-weight: 600;
+      white-space: nowrap;
+    }
+    .hero-cta {
+      margin-top: 18px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      align-items: stretch;
+    }
+    .btn-main, .btn-sub {
+      display: inline-block;
+      text-decoration: none;
+      text-align: center;
+      padding: 12px 18px;
+      border-radius: 999px;
+      font-size: 14px;
+      font-weight: 800;
+      border: 2px solid #000;
+    }
+    .btn-main {
+      background: #000;
+      color: #ffeb3b;
+    }
+    .btn-sub {
+      background: transparent;
+      color: #000;
+    }
+    .hero-note {
+      margin-top: 6px;
+      font-size: 11px;
+      color: #111;
+    }
+
+    .section {
+      margin-top: 28px;
+      padding: 18px 14px 20px;
+      border-radius: 16px;
+      background: #151515;
+      border: 1px solid #333;
+    }
+    .section h2 {
+      margin: 0 0 10px;
+      font-size: 18px;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .section h2 span.tag {
+      font-size: 10px;
+      padding: 1px 8px;
+      border-radius: 999px;
+      background: #ffeb3b;
+      color: #000;
+      font-weight: 700;
+    }
+    .section p {
+      font-size: 13px;
+      margin: 4px 0;
+    }
+    .list {
+      padding-left: 18px;
+      margin: 6px 0 0;
+      font-size: 13px;
+    }
+    .list li { margin-bottom: 4px; }
+
+    .point-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(160px,1fr));
+      gap: 10px;
+      margin-top: 10px;
+    }
+    .point-card {
+      background: #000;
+      border-radius: 12px;
+      padding: 10px 10px 12px;
+      border: 1px solid #333;
+      font-size: 12px;
+      position: relative;
+    }
+    .point-label {
+      font-size: 11px;
+      font-weight: 700;
+      color: #ffeb3b;
+      margin-bottom: 4px;
+    }
+    .point-title {
+      font-weight: 800;
+      margin-bottom: 4px;
+    }
+    .point-note {
+      font-size: 11px;
+      color: #bbb;
+    }
+
+    .area-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(140px,1fr));
+      gap: 8px;
+      margin-top: 10px;
+    }
+    .area-card {
+      background: #000;
+      border-radius: 10px;
+      padding: 8px 10px;
+      font-size: 12px;
+      border: 1px solid #333;
+    }
+    .area-name {
+      font-weight: 800;
+      color: #ffeb3b;
+      margin-bottom: 3px;
+    }
+
+    .flow-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px,1fr));
+      gap: 10px;
+      margin-top: 10px;
+    }
+    .flow-step {
+      background: #000;
+      border-radius: 12px;
+      padding: 10px 10px 12px;
+      border: 1px solid #333;
+      font-size: 12px;
+      position: relative;
+    }
+    .flow-num {
+      position: absolute;
+      top: 8px;
+      right: 10px;
+      font-size: 11px;
+      padding: 2px 8px;
+      border-radius: 999px;
+      background: #ff3b30;
+      font-weight: 800;
+    }
+    .flow-title {
+      font-weight: 800;
+      margin-bottom: 4px;
+      color: #ffeb3b;
+    }
+
+    .faq-item {
+      margin-top: 10px;
+      padding: 8px 10px;
+      border-radius: 10px;
+      background: #000;
+      border: 1px solid #333;
+      font-size: 12px;
+    }
+    .faq-q {
+      font-weight: 800;
+      margin-bottom: 3px;
+      color: #ffeb3b;
+    }
+
+    .cta-bottom {
+      margin: 28px 0 10px;
+      text-align: center;
+    }
+    .cta-bottom p {
+      font-size: 13px;
+      margin: 4px 0;
+    }
+
+    footer {
+      text-align: center;
+      padding: 18px 0 24px;
+      font-size: 11px;
+      color: #777;
+    }
+
+    @media (min-width: 768px) {
+      .hero h1 { font-size: 28px; }
+      .hero p { font-size: 14px; }
+      .btn-main, .btn-sub { max-width: 340px; margin: 0 auto; display: block; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo-wrap">
+      <!-- ▼ ロゴ画像のパスを変更 -->
+      <img src="ofa-logo.png" alt="OFA ロゴ">
+      <div class="logo-text">
+        株式会社OFA<br>
+        ONE FOR ALL, ALL FOR ONE
+      </div>
+    </div>
+    <div class="logo-text">
+      加盟543名ドライバー / 全国拡大中
+    </div>
+  </header>
+
+  <main class="container">
+
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero-inner">
+        <div class="hero-badge-top">軽貨物フランチャイズ / ドライバー採用</div>
+        <h1>軽バン1台から、<br>「人生を取り戻す」働き方へ。</h1>
+        <p>未経験歓迎・フランチャイズ独立OK・案件豊富で安定収入。</p>
+        <p>OFAグループ（加盟543名ドライバー／車両540台／全国拡大中）</p>
+
+        <div class="hero-badges">
+          <div class="hero-badge">月収50〜80万円も可能</div>
+          <div class="hero-badge">未経験OK</div>
+          <div class="hero-badge">車両サポートあり</div>
+          <div class="hero-badge">フランチャイズ独立OK</div>
+          <div class="hero-badge">案件豊富で安定収入</div>
+        </div>
+
+        <div class="hero-cta">
+          <!-- ▼ ここをあなたのGoogleフォームURLに変更 -->
+          <a href="GOOGLE_FORM_URL_HERE" class="btn-main" target="_blank" rel="noopener">
+            30秒で仮エントリーする
+          </a>
+          <!-- ▼ LINE公式（採用総合窓口） -->
+          <a href="https://lin.ee/NaHASQp" class="btn-sub" target="_blank" rel="noopener">
+            LINEで相談・質問する
+          </a>
+        </div>
+        <div class="hero-note">
+          ※ 仮エントリー後、担当よりLINEまたはお電話でご連絡します。
+        </div>
+      </div>
+    </section>
+
+    <!-- POINTS -->
+    <section class="section">
+      <h2>OFAで働くポイント <span class="tag">Why OFA?</span></h2>
+      <p>代表も現場叩き上げ。数字とリアルな現場感で、あなたの「稼ぎたい」をサポートします。</p>
+
+      <div class="point-grid">
+        <div class="point-card">
+          <div class="point-label">POINT 01</div>
+          <div class="point-title">月収50〜80万円も現実的</div>
+          <div class="point-note">
+            エリア・稼働日数に合わせて案件を組み立て。<br>
+            「いくら稼ぎたいか」から逆算してシミュレーションします。
+          </div>
+        </div>
+        <div class="point-card">
+          <div class="point-label">POINT 02</div>
+          <div class="point-title">未経験スタートが8割以上</div>
+          <div class="point-note">
+            同乗研修・動画マニュアル・先輩ドライバーのLINEグループなど、現場レベルのサポートあり。
+          </div>
+        </div>
+        <div class="point-card">
+          <div class="point-label">POINT 03</div>
+          <div class="point-title">案件豊富で安定収入</div>
+          <div class="point-note">
+            宅配・ルート・スポット・企業配など、複数案件を組み合わせて「安定＋伸びしろ」を両立。
+          </div>
+        </div>
+        <div class="point-card">
+          <div class="point-label">POINT 04</div>
+          <div class="point-title">フランチャイズ独立OK</div>
+          <div class="point-note">
+            ドライバーからリーダー、案件オーナー、拠点長へ。<br>
+            将来の独立・多拠点展開まで見据えたプランも相談できます。
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- AREA -->
+    <section class="section">
+      <h2>対応エリア <span class="tag">全国拡大中</span></h2>
+      <p>現在、以下のエリアでドライバーを募集しています。（時期により募集状況は変動します）</p>
+
+      <div class="area-grid">
+        <div class="area-card">
+          <div class="area-name">関東</div>
+          東京 / 千葉 / 埼玉 / 神奈川
+        </div>
+        <div class="area-card">
+          <div class="area-name">中部</div>
+          愛知
+        </div>
+        <div class="area-card">
+          <div class="area-name">関西</div>
+          大阪 / 京都
+        </div>
+        <div class="area-card">
+          <div class="area-name">四国</div>
+          愛媛 / 高知 / 徳島
+        </div>
+        <div class="area-card">
+          <div class="area-name">中国</div>
+          広島 / 兵庫
+        </div>
+        <div class="area-card">
+          <div class="area-name">九州・沖縄</div>
+          福岡 / 熊本 / 鹿児島 / 宮崎 / 長崎 / 佐賀 / 大分 / 沖縄
+        </div>
+      </div>
+    </section>
+
+    <!-- FLOW -->
+    <section class="section">
+      <h2>採用の流れ <span class="tag">Flow</span></h2>
+      <p>やり取りは、できるだけシンプルに。応募〜稼働までのイメージです。</p>
+
+      <div class="flow-grid">
+        <div class="flow-step">
+          <div class="flow-num">STEP 1</div>
+          <div class="flow-title">Webから仮エントリー</div>
+          <p>このページの「30秒で仮エントリー」から送信。必要最低限の項目だけでOKです。</p>
+        </div>
+        <div class="flow-step">
+          <div class="flow-num">STEP 2</div>
+          <div class="flow-title">担当よりご連絡</div>
+          <p>LINEまたはお電話にてご連絡。簡単に希望条件をヒアリングし、面談日時を調整します。</p>
+        </div>
+        <div class="flow-step">
+          <div class="flow-num">STEP 3</div>
+          <div class="flow-title">オンライン or 対面面談</div>
+          <p>目標収入・エリア・稼働日数に合わせて、具体的な案件や働き方をご提案します。</p>
+        </div>
+        <div class="flow-step">
+          <div class="flow-num">STEP 4</div>
+          <div class="flow-title">ご契約・スタート準備</div>
+          <p>電子契約・車両手配・研修などを経て、初日稼働へ。スタート後もLINEでフォローします。</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section">
+      <h2>よくある質問 <span class="tag">FAQ</span></h2>
+
+      <div class="faq-item">
+        <div class="faq-q">Q. 完全未経験でも大丈夫ですか？</div>
+        <p>A. 大丈夫です。OFAでは未経験スタートが8割以上。同行研修やマニュアル、グループLINEでのフォロー体制があります。</p>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q">Q. 車両を持っていませんが応募できますか？</div>
+        <p>A. はい。リース・レンタルのご相談も可能です。フォームで「リース希望」「相談したい」を選択してください。</p>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q">Q. いきなりフランチャイズ独立は不安です。</div>
+        <p>A. まずはドライバーとして現場を経験し、収入と生活リズムを整えてからステップアップする方がほとんどです。タイミングも一緒に考えましょう。</p>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q">Q. どのくらい稼げるか、数字で見たいです。</div>
+        <p>A. 面談時に「エリア」「稼働日数」「希望収入」をもとに、シミュレーション表で具体的な金額をお見せします。</p>
+      </div>
+    </section>
+
+    <!-- CTA BOTTOM -->
+    <div class="cta-bottom">
+      <p>ここまで読んでくださった方へ。</p>
+      <p>少しでも「話を聞いてみたい」と思ったら、<br>まずは仮エントリーかLINE相談で、一歩だけ踏み出してみてください。</p>
+      <p>
+        <a href="GOOGLE_FORM_URL_HERE" class="btn-main" target="_blank" rel="noopener">
+          30秒で仮エントリーする
+        </a>
+      </p>
+      <p>
+        <a href="https://lin.ee/NaHASQp" class="btn-sub" target="_blank" rel="noopener">
+          LINEで相談・質問する
+        </a>
+      </p>
+    </div>
+
+  </main>
+
+  <footer>
+    © 株式会社OFA / ONE FOR ALL, ALL FOR ONE
+  </footer>
+</body>
+</html>
